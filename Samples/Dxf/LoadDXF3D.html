@@ -1,0 +1,74 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Load .DXF File</title>
+    <link rel="stylesheet" href="libs/bootstrap/bootstrap-3.3.6/css/bootstrap.min.css">
+
+    <script src="libs/dxf-parser.js"></script>
+    <script src="libs/jquery.min.js"></script>
+    
+    <!-- Babylon.js -->
+    <script src="http://www.babylonjs.com/hand.minified-1.2.js"></script>
+    <script src="http://www.babylonjs.com/cannon.js"></script>
+    <script src="http://www.babylonjs.com/oimo.js"></script>
+    <script src="http://www.babylonjs.com/babylon.js"></script>
+    
+    <script src="babylon-dxf.js"></script>
+</head>
+<body>
+<style>
+
+    html, body {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #renderCanvas {
+        width: 1200px;
+        height: 800px;
+        touch-action: none;
+    }
+
+    .progress {
+        opacity: 0;
+        -webkit-transition: opacity 1s linear;
+        -moz-transition: opacity 1s linear;
+        -ms-transition: opacity 1s linear;
+        -o-transition: opacity 1s linear;
+        transition: opacity 1s linear;
+    }
+
+    .progress.loading {
+        opacity: 1;
+    }
+</style>
+
+
+<div class="container">
+    <div role="form">
+        <div class="form-group">
+            <label for="exampleInputFile">Choose a DXF file</label>
+            <input type="file" accept=".dxf" id="dxf" name="file">
+            <div style="float : left">
+              <div id="file-description" class="help-block"></div>            
+            </div>
+            <div style="float: rigth;">
+              <div class="progress progress-striped" style="width: 300px;">
+                <div id="file-progress-bar" class="progress-bar progress-bar-success" role="progressbar" style="width: 0">
+                </div>
+            </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <canvas id="renderCanvas"></canvas>
+</div>
+
+<script src="UrlServicios.js"></script>
+<script src="loadFileDXF.js"></script>
+</body>
+</html>

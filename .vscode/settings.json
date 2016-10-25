@@ -1,0 +1,6 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.tabSize": 2,
+    "http.proxy": "http://proxy.catastro.minhac.es:80",
+    "http.proxyStrictSSL": false
+}
